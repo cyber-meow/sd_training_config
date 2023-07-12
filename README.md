@@ -2,7 +2,7 @@
 
 Just a toml file to be used for [kohya-ss/sd-scripts](https://github.com/kohya-ss/sd-scripts/) and [KohakuBlueleaf/LyCORIS](https://github.com/KohakuBlueleaf/LyCORIS)
 
-Please follow the proper instructions to set up sd-scripts and run `pip install lycoris_lora` to install LyCORIS
+Please follow the proper instructions to set up `sd-scripts` and run `pip install lycoris_lora` to install LyCORIS
 
 Then all you need to do is to modify the `XXX.toml` file and run
 
