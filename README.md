@@ -14,7 +14,6 @@ You can do sequential training by putting `sequntial_train.py` in the `sd_script
 
 ```
 python sequential_train.py --script_name train_network.py --dir_path /path/to/config_directory
-
 ```
 
 
