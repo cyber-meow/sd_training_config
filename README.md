@@ -10,7 +10,12 @@ Then all you need to do is to modify the `XXX.toml` file and run
 python train_network.py --config_file XXX.toml
 ```
 
-More details on LyCORIS arguments and db version coming soon
+You can do sequential training by putting `sequntial_train.py` in the `sd_scripts` directory and run
+
+```
+python sequential_train.py --script_name train_network.py --dir_path /path/to/config_directory
+
+```
 
 
 ### Why did I make this?
