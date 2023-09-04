@@ -27,8 +27,6 @@ v_parameterization = false
 scale_v_pred_loss_like_noise_pred = false
 
 [Network_setup]
-network_dim = 8
-network_alpha = 4.0
 dim_from_weights = false
 network_dropout = 0
 network_train_unet_only = false
@@ -40,15 +38,15 @@ resume = false
 
 [LyCORIS]
 network_module = "lycoris.kohya"
-network_args = [ "conv_dim=4", "conv_alpha=1", "algo=loha",]
+network_args = [ "preset=attn-mlp", "algo=full", "train_norm=True", ]
 
 [Optimizer]
 train_batch_size = 8
 gradient_checkpointing = false
 gradient_accumulation_steps = 1
 optimizer_type = "AdamW8bit"
-unet_lr = 0.0002
-text_encoder_lr = 0.0002
+unet_lr = 2e-6
+text_encoder_lr = 2e-6
 max_grad_norm = 1.0
 optimizer_args = [ "weight_decay=0.1", "betas=0.9,0.99",]
 
@@ -70,7 +68,7 @@ min_snr_gamma = 5
 # adaptive_noise_scale = 0
 multires_noise_discount = 0.3
 multires_noise_iterations = 10
-scale_weight_norms = 1
+# scale_weight_norms = 1
 
 [ARB]
 enable_bucket = true
@@ -114,7 +112,7 @@ sample_sampler = "ddim"
 [Logging]
 logging_dir = "logs_training"
 log_with = "tensorboard"
-log_prefix = "lycoris_"
+log_prefix = "lycoris-full_"
 # log_tracker_name = ?
 # wandb_api_key = ?
 
